@@ -41,9 +41,7 @@ const ProductPreviewCard = ({
             <AddProduct
               onClick={handleAddProduct}
               className="btn btn-danger"
-              onAddProduct={function (): void {
-                throw new Error("Function not implemented.");
-              }}
+              onAddProduct={handleAddProduct}
             />
           )}
         </div>
