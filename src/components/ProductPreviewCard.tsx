@@ -1,3 +1,4 @@
+import React from "react";
 import AddProduct from "./AddProduct";
 
 interface Product {
@@ -8,7 +9,7 @@ interface Product {
 
 interface ProductPreviewCardProps {
   product: Product;
-  onAddProduct?: (product: Product) => void;
+  onAddProduct: (product: Product) => void;
 }
 
 const ProductPreviewCard = ({
@@ -22,9 +23,9 @@ const ProductPreviewCard = ({
   };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const addPoduct = () => {
-  //   // after making redux
-  // };
+  const addPoduct = () => {
+    onAddProduct(product);
+  };
 
   return (
     <div className="w-100 p-4 m-2 rounded text-white bg-gradient text-center">
